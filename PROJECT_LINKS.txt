@@ -1,0 +1,41 @@
+PROJECT SHOWCASE LINKS
+
+1. Hiking App
+   Live: https://hiking-app-puce.vercel.app/
+   GitHub: https://github.com/Qaziaaaa/hiking-app
+
+2. Personal Portfolio
+   Live: https://porfolio-qazi.netlify.app
+   GitHub: https://github.com/Qaziaaaa/Cinematic-Personal-Portfolio
+
+3. AgencyX AI
+   Live: https://agencyxai.netlify.app
+   GitHub: https://github.com/Qaziaaaa/AI-Agency-app
+
+4. QBuilds
+   Live: https://qbulids.netlify.app
+   GitHub: https://github.com/Qaziaaaa/Construction-app
+
+5. Vertex Design Lab
+   Live: https://vertexdesignlab.netlify.app
+   GitHub: https://github.com/Qaziaaaa/vertex-studio
+
+6. MarketingZ
+   Live: https://marketingz.netlify.app
+   GitHub: https://github.com/Qaziaaaa/Marketing-frontend-project
+
+7. SaaS Landing Page
+   Live: https://landingpagesaas.netlify.app
+   GitHub: https://github.com/Qaziaaaa/SAAS
+
+8. E-Commerce Store
+   Live: https://ecommercestoreqazi.netlify.app
+   GitHub: https://github.com/Qaziaaaa/ecommerce-frontend
+
+9. Oliipop Clone
+   Live: https://oliipop.netlify.app
+   GitHub: https://github.com/Qaziaaaa/Olipop-animated-site
+
+10. Gaming Bench
+    Live: https://gamingbench.netlify.app
+    GitHub: https://github.com/Qaziaaaa/Gaming-app
