@@ -26,7 +26,7 @@ export function Navbar() {
             <Link to="/fullstack" className={isActive('/fullstack')}>
               Fullstack
             </Link>
-            <a href="https://drive.google.com/file/d/1jyTb2rIx2ic2nf9Go3BGjwqMc8pbVRXM/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors">
               <BookOpen className="w-4 h-4" />
               <span>Resume</span>
             </a>
