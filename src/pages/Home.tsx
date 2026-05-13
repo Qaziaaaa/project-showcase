@@ -10,7 +10,7 @@ const FloatingIcon = ({ icon: Icon, color, className }: { icon: any, color: stri
     className={`absolute flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/20 transition-transform hover:scale-110 duration-300 ${className}`} 
     style={{ boxShadow: `0 8px 32px -8px ${color}40` }}
   >
-    <Icon className="w-6 h-6 md:w-8 md:h-8" style={{ color }} />
+    <Icon className="w-6 h-6 md:w-8 md:h-8" style={{ color }} aria-hidden="true" />
   </div>
 );
 
@@ -21,22 +21,22 @@ export function Home() {
   const skills = [
     {
       category: "Frontend",
-      icon: <Palette className="w-5 h-5 text-orange-500" />,
+      icon: <Palette className="w-5 h-5 text-orange-500" aria-hidden="true" />,
       items: ['React', 'Tailwind CSS', 'HTML5', 'CSS3', 'Vite', 'Next.js']
     },
     {
       category: "Backend & Database",
-      icon: <Server className="w-5 h-5 text-orange-500" />,
+      icon: <Server className="w-5 h-5 text-orange-500" aria-hidden="true" />,
       items: ['Node.js', 'Express', 'MongoDB', 'REST API']
     },
     {
       category: "Tools & Platforms",
-      icon: <Wrench className="w-5 h-5 text-orange-500" />,
+      icon: <Wrench className="w-5 h-5 text-orange-500" aria-hidden="true" />,
       items: ['Git', 'GitHub', 'Vercel', 'Netlify', 'VS Code', 'Postman']
     },
     {
       category: "Currently Learning",
-      icon: <BookOpen className="w-5 h-5 text-orange-500" />,
+      icon: <BookOpen className="w-5 h-5 text-orange-500" aria-hidden="true" />,
       items: ['TypeScript', 'GraphQL', 'Docker']
     }
   ];
@@ -101,7 +101,7 @@ export function Home() {
         <Container>
           {/* Categories Section */}
           <div id="categories" className="mb-32">
-            <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-8">Project Categories</h2>
+            <h2 className="text-sm font-bold text-zinc-300 uppercase tracking-widest mb-8">Project Categories</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <CategoryCard 
                 title="Frontend Projects"
@@ -122,7 +122,7 @@ export function Home() {
 
           {/* Skills Section */}
           <div>
-            <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-8">Technical Arsenal</h2>
+            <h2 className="text-sm font-bold text-zinc-300 uppercase tracking-widest mb-8">Technical Arsenal</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {skills.map((skillGroup) => (
                 <div key={skillGroup.category} className="bg-zinc-900/40 rounded-3xl p-8 border border-white/10 ring-1 ring-white/5 hover:border-orange-500/50 hover:ring-orange-500/20 transition-all duration-500 backdrop-blur-md">

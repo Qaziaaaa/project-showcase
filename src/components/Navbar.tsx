@@ -7,7 +7,7 @@ export function Navbar() {
   const location = useLocation();
 
   const isActive = (path: string) => {
-    return location.pathname === path ? 'text-orange-400 font-medium' : 'text-zinc-400 hover:text-white transition-colors';
+    return location.pathname === path ? 'text-orange-400 font-medium' : 'text-zinc-300 hover:text-white transition-colors';
   };
 
   return (
@@ -16,7 +16,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-1 transition-colors group">
             <Logo size={28} className="group-hover:scale-110 transition-transform duration-300 mr-0.5" />
-            <span className="text-lg font-bold tracking-tight text-white group-hover:text-orange-400 transition-colors">azi Farhan Ahmad</span>
+            <span className="text-lg font-bold tracking-tight text-white group-hover:text-orange-400 transition-colors">Qazi Farhan Ahmad</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -43,10 +43,10 @@ export function Navbar() {
 
           {/* Mobile menu simple version */}
           <div className="flex md:hidden items-center gap-4 text-sm">
-            <Link to="/frontend" className={isActive('/frontend')}>
+            <Link to="/frontend" className={isActive('/frontend')} aria-label="Frontend Projects">
               FE
             </Link>
-            <Link to="/fullstack" className={isActive('/fullstack')}>
+            <Link to="/fullstack" className={isActive('/fullstack')} aria-label="Fullstack Projects">
               FS
             </Link>
           </div>

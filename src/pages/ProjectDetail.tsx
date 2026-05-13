@@ -24,7 +24,7 @@ export function ProjectDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-start mb-16">
           {/* Left Column: Info */}
           <div className="pr-0 lg:pr-8">
-            <span className="text-zinc-500 text-sm capitalize font-bold mb-3 block tracking-wide">{project.category} Project</span>
+            <span className="text-zinc-300 text-sm capitalize font-bold mb-3 block tracking-wide">{project.category} Project</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-[1.1]">
               {project.title}
             </h1>
@@ -91,7 +91,7 @@ export function ProjectDetail() {
         {/* Bottom Cards Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div className="bg-zinc-900/40 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-white/20 transition-colors shadow-lg">
-            <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest block mb-2">Stack</span>
+            <span className="text-zinc-300 text-xs font-bold uppercase tracking-widest block mb-2">Stack</span>
             <h3 className="text-2xl font-bold text-white mb-4">What it includes</h3>
             <p className="text-zinc-400 text-sm mb-8 leading-relaxed font-light">
               Key building blocks and deliverables for this project.
@@ -104,7 +104,7 @@ export function ProjectDetail() {
           </div>
 
           <div className="bg-zinc-900/40 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-white/20 transition-colors shadow-lg">
-            <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest block mb-2">Tech</span>
+            <span className="text-zinc-300 text-xs font-bold uppercase tracking-widest block mb-2">Tech</span>
             <h3 className="text-2xl font-bold text-white mb-4">Tools & technologies</h3>
             <p className="text-zinc-400 text-sm mb-8 leading-relaxed font-light">
               Main frameworks, libraries, and tooling used.
@@ -120,7 +120,7 @@ export function ProjectDetail() {
         </div>
 
         <div className="bg-zinc-900/40 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-white/20 transition-colors shadow-lg">
-          <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest block mb-2">Highlights</span>
+          <span className="text-zinc-300 text-xs font-bold uppercase tracking-widest block mb-2">Highlights</span>
           <h3 className="text-2xl font-bold text-white mb-4">What was built</h3>
           <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light max-w-3xl">
             A quick breakdown of the most important features.
