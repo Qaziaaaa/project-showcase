@@ -11,7 +11,7 @@ export function TagBadge({ children, variant = 'default', className = '' }: TagB
   
   const variants = {
     default: "bg-white/[0.05] text-zinc-300 border-white/10 ring-1 ring-white/5",
-    outline: "bg-transparent text-zinc-400 border-white/20",
+    outline: "bg-transparent text-zinc-300 border-white/20",
     primary: "bg-orange-500/10 text-orange-400 border-orange-500/20"
   };
 

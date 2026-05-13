@@ -16,7 +16,7 @@ export function FullstackProjects() {
       <Container>
         <div className="mb-12">
           <h1 className="text-3xl font-bold text-white mb-4">Fullstack Projects</h1>
-          <p className="text-lg text-gray-400 max-w-2xl">
+          <p className="text-lg text-gray-300 max-w-2xl">
             End-to-end applications showcasing backend architecture, database design, and API integration.
           </p>
         </div>

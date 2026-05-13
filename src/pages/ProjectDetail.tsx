@@ -15,7 +15,7 @@ export function ProjectDetail() {
       <Container>
         <Link 
           to={`/${project.category}`}
-          className="inline-flex items-center text-sm font-medium px-5 py-2.5 rounded-full bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white border border-white/10 transition-all mb-12 shadow-md"
+          className="inline-flex items-center text-sm font-medium px-5 py-2.5 rounded-full bg-white/5 text-zinc-300 hover:bg-white/10 hover:text-white border border-white/10 transition-all mb-12 shadow-md"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Projects
@@ -28,7 +28,7 @@ export function ProjectDetail() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-[1.1]">
               {project.title}
             </h1>
-            <p className="text-lg text-zinc-400 font-light mb-8 leading-relaxed">
+            <p className="text-lg text-zinc-300 font-light mb-8 leading-relaxed">
               {project.description}
             </p>
 
@@ -93,7 +93,7 @@ export function ProjectDetail() {
           <div className="bg-zinc-900/40 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-white/20 transition-colors shadow-lg">
             <span className="text-zinc-300 text-xs font-bold uppercase tracking-widest block mb-2">Stack</span>
             <h3 className="text-2xl font-bold text-white mb-4">What it includes</h3>
-            <p className="text-zinc-400 text-sm mb-8 leading-relaxed font-light">
+            <p className="text-zinc-300 text-sm mb-8 leading-relaxed font-light">
               Key building blocks and deliverables for this project.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -106,7 +106,7 @@ export function ProjectDetail() {
           <div className="bg-zinc-900/40 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-white/20 transition-colors shadow-lg">
             <span className="text-zinc-300 text-xs font-bold uppercase tracking-widest block mb-2">Tech</span>
             <h3 className="text-2xl font-bold text-white mb-4">Tools & technologies</h3>
-            <p className="text-zinc-400 text-sm mb-8 leading-relaxed font-light">
+            <p className="text-zinc-300 text-sm mb-8 leading-relaxed font-light">
               Main frameworks, libraries, and tooling used.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -122,7 +122,7 @@ export function ProjectDetail() {
         <div className="bg-zinc-900/40 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-white/20 transition-colors shadow-lg">
           <span className="text-zinc-300 text-xs font-bold uppercase tracking-widest block mb-2">Highlights</span>
           <h3 className="text-2xl font-bold text-white mb-4">What was built</h3>
-          <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light max-w-3xl">
+          <p className="text-zinc-300 text-sm mb-6 leading-relaxed font-light max-w-3xl">
             A quick breakdown of the most important features.
           </p>
           <ul className="list-disc list-inside text-zinc-300 text-sm space-y-3 font-light">

@@ -72,16 +72,16 @@ export function Home() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10 font-light leading-relaxed">
             A curated collection of my frontend and full-stack applications, featuring modern UI/UX, scalable architectures, and clean code.
           </p>
 
           {/* Feature Row */}
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 px-8 py-4 rounded-2xl bg-zinc-900/40 border border-white/10 ring-1 ring-white/5 text-sm font-medium text-gray-300 mb-12 backdrop-blur-md">
-            <span className="flex items-center gap-2"><Monitor className="w-4 h-4 text-gray-400"/> Frontend</span>
-            <span className="flex items-center gap-2"><Server className="w-4 h-4 text-gray-400"/> Backend</span>
-            <span className="flex items-center gap-2"><Database className="w-4 h-4 text-gray-400"/> Database</span>
-            <span className="flex items-center gap-2"><Layout className="w-4 h-4 text-gray-400"/> UI/UX</span>
+            <span className="flex items-center gap-2"><Monitor className="w-4 h-4 text-gray-300" aria-hidden="true"/> Frontend</span>
+            <span className="flex items-center gap-2"><Server className="w-4 h-4 text-gray-300" aria-hidden="true"/> Backend</span>
+            <span className="flex items-center gap-2"><Database className="w-4 h-4 text-gray-300" aria-hidden="true"/> Database</span>
+            <span className="flex items-center gap-2"><Layout className="w-4 h-4 text-gray-300" aria-hidden="true"/> UI/UX</span>
           </div>
 
           {/* CTA */}

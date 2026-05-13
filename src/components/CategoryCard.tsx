@@ -20,10 +20,10 @@ export function CategoryCard({ title, description, href, count, icon }: Category
       
       <div className="relative z-10">
         <div className="flex items-start justify-between mb-8">
-          <div className="p-3.5 rounded-2xl bg-white/[0.05] border border-white/10 text-zinc-400 group-hover:text-orange-400 group-hover:bg-orange-500/10 group-hover:border-orange-500/20 transition-all duration-500">
+          <div className="p-3.5 rounded-2xl bg-white/[0.05] border border-white/10 text-zinc-300 group-hover:text-orange-400 group-hover:bg-orange-500/10 group-hover:border-orange-500/20 transition-all duration-500" aria-hidden="true">
             {icon}
           </div>
-          <span className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-xs font-medium text-zinc-400 group-hover:bg-orange-500/10 group-hover:text-orange-400 group-hover:border-orange-500/20 transition-all duration-500">
+          <span className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-xs font-medium text-zinc-300 group-hover:bg-orange-500/10 group-hover:text-orange-400 group-hover:border-orange-500/20 transition-all duration-500">
             {count} Projects
           </span>
         </div>
@@ -31,13 +31,13 @@ export function CategoryCard({ title, description, href, count, icon }: Category
         <h3 className="text-2xl font-bold text-zinc-100 group-hover:text-white mb-3 transition-colors">
           {title}
         </h3>
-        <p className="text-zinc-400 mb-8 font-light leading-relaxed">
+        <p className="text-zinc-300 mb-8 font-light leading-relaxed">
           {description}
         </p>
         
         <div className="flex items-center text-sm font-medium text-zinc-300 group-hover:text-orange-400 transition-colors">
           Explore Category
-          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
         </div>
       </div>
     </Link>

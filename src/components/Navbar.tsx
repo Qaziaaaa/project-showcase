@@ -26,17 +26,17 @@ export function Navbar() {
             <Link to="/fullstack" className={isActive('/fullstack')}>
               Fullstack
             </Link>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors">
-              <BookOpen className="w-4 h-4" />
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors">
+              <BookOpen className="w-4 h-4" aria-hidden="true" />
               <span>Resume</span>
             </a>
             <div className="w-px h-4 bg-white/10 mx-2"></div>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
-              <Github className="w-4 h-4" />
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white transition-colors">
+              <Github className="w-4 h-4" aria-hidden="true" />
               <span className="sr-only">GitHub</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
-              <Linkedin className="w-4 h-4" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white transition-colors">
+              <Linkedin className="w-4 h-4" aria-hidden="true" />
               <span className="sr-only">LinkedIn</span>
             </a>
           </nav>

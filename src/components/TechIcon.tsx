@@ -73,7 +73,7 @@ export function TechIcon({ name, className = "" }: TechIconProps) {
       case 'vscode': return <VscVscode className="w-3.5 h-3.5 text-[#007ACC]" />;
       case 'postman': return <SiPostman className="w-3.5 h-3.5 text-[#FF6C37]" />;
       case 'aws': return <FaAws className="w-3.5 h-3.5 text-white" />;
-      default: return <Code2 className="w-3.5 h-3.5 text-gray-400" />;
+      default: return <Code2 className="w-3.5 h-3.5 text-gray-300" />;
     }
   };
 

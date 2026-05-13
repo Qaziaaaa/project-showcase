@@ -16,7 +16,7 @@ export function FrontendProjects() {
       <Container>
         <div className="mb-12">
           <h1 className="text-3xl font-bold text-white mb-4">Frontend Projects</h1>
-          <p className="text-lg text-gray-400 max-w-2xl">
+          <p className="text-lg text-gray-300 max-w-2xl">
             A selection of projects focusing on user interface, client-side architecture, and performance.
           </p>
         </div>
