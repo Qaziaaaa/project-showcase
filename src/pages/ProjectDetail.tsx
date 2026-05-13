@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Container } from '../components/Container';
 import { projects } from '../data/projects';
 import { ArrowLeft } from 'lucide-react';
+import { PremiumPreview } from '../components/PremiumPreview';
 
 export function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -62,27 +63,33 @@ export function ProjectDetail() {
               </a>
             </div>
           </div>
-
           {/* Right Column: Browser Mockup */}
-          <div className="relative w-full rounded-3xl bg-zinc-900 border border-white/10 overflow-hidden shadow-2xl mt-8 lg:mt-0">
+          <div className="relative w-full rounded-3xl bg-[#0a0a0a] border border-white/10 overflow-hidden shadow-[0_0_50px_-12px_rgba(249,115,22,0.2)] mt-8 lg:mt-0 group/browser">
             {/* Browser Header */}
-            <div className="h-12 border-b border-white/10 flex items-center px-6 gap-2 bg-zinc-800/80 backdrop-blur-md">
-              <div className="w-3 h-3 rounded-full bg-zinc-600"></div>
-              <div className="w-3 h-3 rounded-full bg-zinc-600"></div>
-              <div className="w-3 h-3 rounded-full bg-zinc-600"></div>
+            <div className="h-12 border-b border-white/10 flex items-center px-6 gap-2 bg-zinc-900/80 backdrop-blur-md relative z-30">
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                <div className="w-3 h-3 rounded-full bg-amber-500/50"></div>
+                <div className="w-3 h-3 rounded-full bg-emerald-500/50"></div>
+              </div>
               {/* Fake address bar */}
-              <div className="ml-4 flex-grow max-w-sm h-6 bg-black/30 rounded-md"></div>
+              <div className="ml-4 flex-grow max-w-sm h-6 bg-white/5 rounded-full flex items-center px-3 border border-white/5">
+                <div className="w-3/4 h-2 bg-white/10 rounded-full" />
+              </div>
             </div>
-            {/* Content / Iframe */}
-            <div className="relative h-[400px] lg:h-[500px] w-full bg-black/50">
-              <iframe 
-                src={project.live} 
-                title={project.title}
-                className="w-full h-full border-none opacity-90 hover:opacity-100 transition-opacity"
-                sandbox="allow-scripts allow-same-origin"
+            {/* Content / Premium Preview */}
+            <div className="relative h-[450px] lg:h-[550px] w-full">
+              <PremiumPreview 
+                title={project.title} 
+                category={project.category} 
+                tech={project.tech} 
               />
+              
+              {/* Subtle overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
             </div>
           </div>
+
         </div>
 
         {/* Bottom Cards Row */}
