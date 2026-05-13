@@ -79,11 +79,7 @@ export function ProjectDetail() {
             </div>
             {/* Content / Premium Preview */}
             <div className="relative h-[450px] lg:h-[550px] w-full">
-              <PremiumPreview 
-                title={project.title} 
-                category={project.category} 
-                tech={project.tech} 
-              />
+              <PremiumPreview />
               
               {/* Subtle overlay for depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
