@@ -10,6 +10,7 @@ import { Navbar } from './components/Navbar';
 const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
 const FrontendProjects = lazy(() => import('./pages/FrontendProjects').then(m => ({ default: m.FrontendProjects })));
 const FullstackProjects = lazy(() => import('./pages/FullstackProjects').then(m => ({ default: m.FullstackProjects })));
+const AiProjects = lazy(() => import('./pages/AiProjects').then(m => ({ default: m.AiProjects })));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail').then(m => ({ default: m.ProjectDetail })));
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/frontend" element={<FrontendProjects />} />
                 <Route path="/fullstack" element={<FullstackProjects />} />
+                <Route path="/ai" element={<AiProjects />} />
                 <Route path="/project/:slug" element={<ProjectDetail />} />
               </Routes>
             </Suspense>

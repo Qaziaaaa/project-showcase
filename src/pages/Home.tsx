@@ -1,7 +1,7 @@
 import { Container } from '../components/Container';
 import { CategoryCard } from '../components/CategoryCard';
 import { projects } from '../data/projects';
-import { Github, Palette, Server, Wrench, BookOpen, Monitor, Database, Layout } from 'lucide-react';
+import { Github, Palette, Server, Wrench, BookOpen, Monitor, Database, Layout, Brain } from 'lucide-react';
 import { TechIcon } from '../components/TechIcon';
 import { SiReact, SiTailwindcss, SiTypescript, SiNextdotjs, SiNodedotjs, SiPostgresql } from 'react-icons/si';
 
@@ -17,6 +17,7 @@ const FloatingIcon = ({ icon: Icon, color, className }: { icon: any, color: stri
 export function Home() {
   const frontendCount = projects.filter(p => p.category === 'frontend').length;
   const fullstackCount = projects.filter(p => p.category === 'fullstack').length;
+  const aiCount = projects.filter(p => p.category === 'ai').length;
 
   const skills = [
     {
@@ -32,12 +33,17 @@ export function Home() {
     {
       category: "Tools & Platforms",
       icon: <Wrench className="w-5 h-5 text-orange-500" aria-hidden="true" />,
-      items: ['Git', 'GitHub', 'Vercel', 'Netlify', 'VS Code', 'Postman']
+      items: ['Git', 'GitHub', 'Vercel', 'Netlify', 'VS Code', 'Postman', 'Antigravity', 'Windsurf', 'Google AI Studio', 'Google Stitch']
     },
     {
       category: "Currently Learning",
       icon: <BookOpen className="w-5 h-5 text-orange-500" aria-hidden="true" />,
       items: ['TypeScript', 'GraphQL', 'Docker']
+    },
+    {
+      category: "AI & ML",
+      icon: <Brain className="w-5 h-5 text-orange-500" aria-hidden="true" />,
+      items: ['Groq API', 'Jina AI', 'Supabase', 'Vector DB', 'RAG']
     }
   ];
 
@@ -81,6 +87,7 @@ export function Home() {
             <span className="flex items-center gap-2"><Monitor className="w-4 h-4 text-gray-300" aria-hidden="true"/> Frontend</span>
             <span className="flex items-center gap-2"><Server className="w-4 h-4 text-gray-300" aria-hidden="true"/> Backend</span>
             <span className="flex items-center gap-2"><Database className="w-4 h-4 text-gray-300" aria-hidden="true"/> Database</span>
+            <span className="flex items-center gap-2"><Brain className="w-4 h-4 text-gray-300" aria-hidden="true"/> AI / ML</span>
             <span className="flex items-center gap-2"><Layout className="w-4 h-4 text-gray-300" aria-hidden="true"/> UI/UX</span>
           </div>
 
@@ -102,7 +109,7 @@ export function Home() {
           {/* Categories Section */}
           <div id="categories" className="mb-32">
             <h2 className="text-sm font-bold text-zinc-300 uppercase tracking-widest mb-8">Project Categories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <CategoryCard 
                 title="Frontend Projects"
                 description="UI/UX focused applications, design systems, and complex client-side state management."
@@ -116,6 +123,13 @@ export function Home() {
                 href="/fullstack"
                 count={fullstackCount}
                 icon={<Server className="w-6 h-6" />}
+              />
+              <CategoryCard 
+                title="AI Projects"
+                description="Intelligent applications powered by LLMs, RAG pipelines, vector databases, and modern AI tooling."
+                href="/ai"
+                count={aiCount}
+                icon={<Brain className="w-6 h-6" />}
               />
             </div>
           </div>

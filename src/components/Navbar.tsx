@@ -26,6 +26,9 @@ export function Navbar() {
             <Link to="/fullstack" className={isActive('/fullstack')}>
               Fullstack
             </Link>
+            <Link to="/ai" className={isActive('/ai')}>
+              AI
+            </Link>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors">
               <BookOpen className="w-4 h-4" aria-hidden="true" />
               <span>Resume</span>
@@ -48,6 +51,9 @@ export function Navbar() {
             </Link>
             <Link to="/fullstack" className={isActive('/fullstack')} aria-label="Fullstack Projects">
               FS
+            </Link>
+            <Link to="/ai" className={isActive('/ai')} aria-label="AI Projects">
+              AI
             </Link>
           </div>
         </div>

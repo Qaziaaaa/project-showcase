@@ -1,7 +1,7 @@
 export type Project = {
   slug: string;
   title: string;
-  category: 'frontend' | 'fullstack';
+  category: 'frontend' | 'fullstack' | 'ai';
   description: string;
   role: string;
   tech: string[];
@@ -142,5 +142,16 @@ export const projects: Project[] = [
     github: 'https://github.com/mazharktk5/css-website.git',
     live: 'https://cssuop.org/',
     image: 'https://picsum.photos/seed/css-website/800/500?blur=2'
+  },
+  {
+    slug: 'mydocchat',
+    title: 'MyDocChat',
+    category: 'ai',
+    description: 'An AI-powered document chatbot that lets you upload documents and have intelligent conversations with your content using RAG (Retrieval-Augmented Generation).',
+    role: 'Built the full AI pipeline including document ingestion, vector embeddings with Jina AI, semantic search via vector database, and conversational AI powered by Groq API with Supabase as the backend.',
+    tech: ['React', 'Groq API', 'Jina AI', 'Supabase', 'Vector DB', 'Tailwind CSS', 'TypeScript'],
+    github: 'https://github.com/Qaziaaaa/mydocchat',
+    live: 'https://mydocchat.vercel.app',
+    image: 'https://picsum.photos/seed/mydocchat/800/500?blur=2'
   }
 ];

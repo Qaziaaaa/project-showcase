@@ -26,11 +26,13 @@ import {
   SiVercel,
   SiNetlify,
   SiDocker,
-  SiPostman
+  SiPostman,
+  SiSupabase,
+  SiGooglegemini
 } from 'react-icons/si';
 import { FaCss3Alt, FaAws } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
-import { Code2 } from 'lucide-react';
+import { Code2, Cpu, Wind, Sparkles, Blocks, BrainCircuit, Database } from 'lucide-react';
 
 interface TechIconProps {
   name: string;
@@ -73,6 +75,15 @@ export function TechIcon({ name, className = "" }: TechIconProps) {
       case 'vscode': return <VscVscode className="w-3.5 h-3.5 text-[#007ACC]" />;
       case 'postman': return <SiPostman className="w-3.5 h-3.5 text-[#FF6C37]" />;
       case 'aws': return <FaAws className="w-3.5 h-3.5 text-white" />;
+      case 'groqapi': return <Cpu className="w-3.5 h-3.5 text-[#F55036]" />;
+      case 'jinaai': return <BrainCircuit className="w-3.5 h-3.5 text-[#009688]" />;
+      case 'supabase': return <SiSupabase className="w-3.5 h-3.5 text-[#3ECF8E]" />;
+      case 'vectordb': return <Database className="w-3.5 h-3.5 text-[#8B5CF6]" />;
+      case 'rag': return <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />;
+      case 'antigravity': return <Sparkles className="w-3.5 h-3.5 text-[#6366F1]" />;
+      case 'windsurf': return <Wind className="w-3.5 h-3.5 text-[#00D4AA]" />;
+      case 'googleaistudio': return <SiGooglegemini className="w-3.5 h-3.5 text-[#4285F4]" />;
+      case 'googlestitch': return <Blocks className="w-3.5 h-3.5 text-[#EA4335]" />;
       default: return <Code2 className="w-3.5 h-3.5 text-gray-300" />;
     }
   };
