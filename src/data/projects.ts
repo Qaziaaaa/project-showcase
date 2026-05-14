@@ -25,10 +25,10 @@ export const projects: Project[] = [
   {
     slug: 'portfolio-qazi',
     title: 'Personal Portfolio',
-    category: 'frontend',
-    description: 'My personal portfolio website showcasing my skills, projects, and professional journey.',
-    role: 'Designed and developed the entire frontend, focusing on performance, accessibility, and modern UI/UX principles.',
-    tech: ['React', 'Tailwind CSS', 'Vite', 'HTML5'],
+    category: 'ai',
+    description: 'My personal portfolio website showcasing my skills, projects, and professional journey, featuring an integrated RAG chatbot.',
+    role: 'Designed and developed the frontend and integrated a conversational AI assistant using Retrieval-Augmented Generation.',
+    tech: ['React', 'Tailwind CSS', 'Vite', 'Groq API', 'Jina AI', 'RAG'],
     github: 'https://github.com/Qaziaaaa/Cinematic-Personal-Portfolio',
     live: 'https://porfolio-qazi.netlify.app',
     image: 'https://picsum.photos/seed/portfolio-qazi/800/500?blur=2'
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     description: 'An AI-powered document chatbot that lets you upload documents and have intelligent conversations with your content using RAG (Retrieval-Augmented Generation).',
     role: 'Built the full AI pipeline including document ingestion, vector embeddings with Jina AI, semantic search via vector database, and conversational AI powered by Groq API with Supabase as the backend.',
     tech: ['React', 'Groq API', 'Jina AI', 'Supabase', 'Vector DB', 'Tailwind CSS', 'TypeScript'],
-    github: 'https://github.com/Qaziaaaa/mydocchat',
+    github: 'https://github.com/Qaziaaaa/RAG-chatbot.git',
     live: 'https://mydocchat.vercel.app',
     image: 'https://picsum.photos/seed/mydocchat/800/500?blur=2'
   }
