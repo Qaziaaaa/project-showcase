@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Container } from './Container';
-import { Github, Linkedin, BookOpen } from 'lucide-react';
+import { Github, Linkedin, BookOpen, Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
 
 export function Navbar() {
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
   const isActive = (path: string) => {
     return location.pathname === path ? 'text-orange-400 font-medium' : 'text-zinc-300 hover:text-white transition-colors';
@@ -44,20 +46,44 @@ export function Navbar() {
             </a>
           </nav>
 
-          {/* Mobile menu simple version */}
-          <div className="flex md:hidden items-center gap-4 text-sm">
-            <Link to="/frontend" className={isActive('/frontend')} aria-label="Frontend Projects">
-              FE
-            </Link>
-            <Link to="/fullstack" className={isActive('/fullstack')} aria-label="Fullstack Projects">
-              FS
-            </Link>
-            <Link to="/ai" className={isActive('/ai')} aria-label="AI Projects">
-              AI
-            </Link>
-          </div>
+          {/* Mobile menu button */}
+          <button 
+            className="md:hidden p-2 text-zinc-300 hover:text-white transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </Container>
+
+      {/* Mobile dropdown menu */}
+      {isOpen && (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-black/95 border-b border-white/10 backdrop-blur-xl shadow-lg shadow-black/50 py-4 px-4 flex flex-col gap-2">
+          <Link to="/frontend" className={`block px-4 py-2 rounded-lg ${isActive('/frontend')} hover:bg-white/5`} onClick={() => setIsOpen(false)}>
+            Frontend Projects
+          </Link>
+          <Link to="/fullstack" className={`block px-4 py-2 rounded-lg ${isActive('/fullstack')} hover:bg-white/5`} onClick={() => setIsOpen(false)}>
+            Fullstack Projects
+          </Link>
+          <Link to="/ai" className={`block px-4 py-2 rounded-lg ${isActive('/ai')} hover:bg-white/5`} onClick={() => setIsOpen(false)}>
+            AI Projects
+          </Link>
+          <div className="h-px bg-white/10 my-2 mx-4"></div>
+          <div className="flex items-center gap-6 px-4 py-2">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors" onClick={() => setIsOpen(false)}>
+              <BookOpen className="w-4 h-4" />
+              <span>Resume</span>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white transition-colors" onClick={() => setIsOpen(false)}>
+              <Github className="w-4 h-4" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white transition-colors" onClick={() => setIsOpen(false)}>
+              <Linkedin className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
