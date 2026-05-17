@@ -4,7 +4,7 @@
  */
 
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 
 const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
@@ -49,7 +49,7 @@ export default function App() {
                 <span>•</span>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">LinkedIn</a>
                 <span>•</span>
-                <a href="/admin" className="hover:text-orange-400/80 transition-colors font-medium" title="Admin Portal">CMS Console</a>
+                <a href="#/admin" className="hover:text-orange-400/80 transition-colors font-medium" title="Admin Portal">CMS Console</a>
               </div>
             </div>
           </footer>
