@@ -161,13 +161,24 @@ export const defaultProjects: Project[] = [
   }
 ];
 
-// Dynamically load projects from localStorage if available, otherwise default to defaultProjects
-export const projects: Project[] = (() => {
-  try {
-    const saved = localStorage.getItem('project_showcase_projects');
-    return saved ? JSON.parse(saved) : defaultProjects;
-  } catch (e) {
-    console.error('Error loading projects from localStorage:', e);
-    return defaultProjects;
+// Dynamically load projects reactively using an ES6 Proxy.
+// This allows imported 'projects' to always reflect local modifications instantly without full page reloads!
+export const projects: Project[] = new Proxy(defaultProjects, {
+  get(target, prop) {
+    let currentProjects = defaultProjects;
+    try {
+      const saved = localStorage.getItem('project_showcase_projects');
+      if (saved) {
+        currentProjects = JSON.parse(saved);
+      }
+    } catch (e) {
+      console.error('Error loading projects from localStorage:', e);
+    }
+    
+    const value = Reflect.get(currentProjects, prop);
+    if (typeof value === 'function') {
+      return value.bind(currentProjects);
+    }
+    return value;
   }
-})();
+});
