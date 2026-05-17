@@ -8,9 +8,14 @@ export type Project = {
   github: string;
   live: string;
   image?: string;
+  client?: string;
+  timeline?: string;
+  deliverables?: string[];
+  highlights?: string[];
 };
 
-export const projects: Project[] = [
+// Hardcoded default projects
+export const defaultProjects: Project[] = [
   {
     slug: 'hiking-app',
     title: 'Hiking App',
@@ -155,3 +160,14 @@ export const projects: Project[] = [
     image: 'https://picsum.photos/seed/mydocchat/800/500?blur=2'
   }
 ];
+
+// Dynamically load projects from localStorage if available, otherwise default to defaultProjects
+export const projects: Project[] = (() => {
+  try {
+    const saved = localStorage.getItem('project_showcase_projects');
+    return saved ? JSON.parse(saved) : defaultProjects;
+  } catch (e) {
+    console.error('Error loading projects from localStorage:', e);
+    return defaultProjects;
+  }
+})();

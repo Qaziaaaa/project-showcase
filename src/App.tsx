@@ -12,6 +12,7 @@ const FrontendProjects = lazy(() => import('./pages/FrontendProjects').then(m =>
 const FullstackProjects = lazy(() => import('./pages/FullstackProjects').then(m => ({ default: m.FullstackProjects })));
 const AiProjects = lazy(() => import('./pages/AiProjects').then(m => ({ default: m.AiProjects })));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail').then(m => ({ default: m.ProjectDetail })));
+const Admin = lazy(() => import('./pages/Admin').then(m => ({ default: m.Admin })));
 
 export default function App() {
   return (
@@ -33,9 +34,25 @@ export default function App() {
                 <Route path="/fullstack" element={<FullstackProjects />} />
                 <Route path="/ai" element={<AiProjects />} />
                 <Route path="/project/:slug" element={<ProjectDetail />} />
+                <Route path="/admin" element={<Admin />} />
               </Routes>
             </Suspense>
           </main>
+          
+          <footer className="border-t border-white/5 py-8 mt-12 bg-black/40 backdrop-blur-md relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-zinc-500 text-xs font-light">
+              <div>
+                © {new Date().getFullYear()} Qazi Farhan Ahmad. All rights reserved.
+              </div>
+              <div className="flex items-center gap-4">
+                <a href="https://github.com/Qaziaaaa" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">GitHub</a>
+                <span>•</span>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">LinkedIn</a>
+                <span>•</span>
+                <a href="/admin" className="hover:text-orange-400/80 transition-colors font-medium" title="Admin Portal">CMS Console</a>
+              </div>
+            </div>
+          </footer>
         </div>
       </div>
     </Router>

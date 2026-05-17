@@ -34,13 +34,13 @@ export function ProjectDetail() {
 
             <div className="flex flex-wrap gap-3 mb-10">
               <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-zinc-300 font-medium">
-                Client: Personal brand
+                Client: {project.client || 'Personal brand'}
               </span>
               <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-zinc-300 font-medium">
                 Role: {project.role || 'Developer'}
               </span>
               <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-zinc-300 font-medium">
-                Timeline: 3 weeks
+                Timeline: {project.timeline || '3 weeks'}
               </span>
             </div>
 
@@ -97,9 +97,33 @@ export function ProjectDetail() {
               Key building blocks and deliverables for this project.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">Responsive UI</span>
-              <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">REST APIs</span>
-              <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">Authentication</span>
+              {project.deliverables && project.deliverables.length > 0 ? (
+                project.deliverables.map((del) => (
+                  <span key={del} className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">
+                    {del}
+                  </span>
+                ))
+              ) : (
+                project.category === 'frontend' ? (
+                  <>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">Responsive UI</span>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">CSS Wireframes</span>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">Layout Design</span>
+                  </>
+                ) : project.category === 'fullstack' ? (
+                  <>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">Responsive UI</span>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">REST APIs</span>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">Authentication</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">AI Model Integration</span>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">RAG Pipeline</span>
+                    <span className="px-4 py-2 rounded-xl border border-white/10 text-sm text-zinc-300 bg-white/5 font-medium">Vector Database</span>
+                  </>
+                )
+              )}
             </div>
           </div>
 
@@ -126,10 +150,18 @@ export function ProjectDetail() {
             A quick breakdown of the most important features.
           </p>
           <ul className="list-disc list-inside text-zinc-300 text-sm space-y-3 font-light">
-            <li>Dynamic Hero and category sections</li>
-            <li>Smooth interactions and layout animations</li>
-            <li>Mobile-first responsive architecture</li>
-            <li>Optimized asset loading and performance</li>
+            {project.highlights && project.highlights.length > 0 ? (
+              project.highlights.map((hl, i) => (
+                <li key={i}>{hl}</li>
+              ))
+            ) : (
+              <>
+                <li>Dynamic Hero and category sections</li>
+                <li>Smooth interactions and layout animations</li>
+                <li>Mobile-first responsive architecture</li>
+                <li>Optimized asset loading and performance</li>
+              </>
+            )}
           </ul>
         </div>
       </Container>
